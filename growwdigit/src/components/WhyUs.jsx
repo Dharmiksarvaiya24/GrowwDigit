@@ -2,10 +2,10 @@ import { useReveal } from '../hooks/useReveal';
 import vid from '../assets/vid.mp4';
 
 const items = [
-  'Data-backed decisions — every recommendation is rooted in analytics, not guesswork.',
-  'Dedicated account team — you get a single point of contact who knows your business inside out.',
-  'Transparent reporting — real-time dashboards and monthly reviews so you always know where we stand.',
-  'Agile execution — we move fast, test often, and optimize continuously to stay ahead of the curve.',
+  'Complete Digital Solutions — Websites, apps, branding, SEO, and digital marketing—all under one roof.',
+  'Results-Driven Strategy — Smart solutions designed to grow your brand, leads, and sales.',
+  'Creative & Modern Execution — Innovative designs and technology that help your business stand out.',
+  'Transparent & Reliable — Clear communication, timely delivery, and dedicated support at every step.',
 ];
 
 export default function WhyUs() {
@@ -82,7 +82,7 @@ function ContentSide() {
           marginBottom: '1.5rem',
         }}
       >
-        A partner who cares about your results as much as you do.
+       Transforming Businesses Through Digital Growth.
       </h2>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>

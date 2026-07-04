@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 
 const stats = [
-  { label: 'Projects Delivered', target: 500, suffix: '+' },
+  { label: 'Projects Delivered', target: 100, suffix: '+' },
   { label: 'Client Satisfaction', target: 98, suffix: '%' },
-  { label: 'Active Clients', target: 150, suffix: '+' },
-  { label: 'Years of Experience', target: 10, suffix: '+' },
+  { label: 'Active Clients', target: 20, suffix: '+' },
+  { label: 'Years of Experience', target: 5, suffix: '+' },
 ];
 
 export default function Stats() {

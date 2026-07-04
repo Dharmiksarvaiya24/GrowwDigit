@@ -2,22 +2,22 @@ import { useState, useEffect, useCallback } from 'react';
 
 const testimonials = [
   {
-    quote: 'GrowwDigit transformed our digital presence. Within three months we saw a 40% increase in organic traffic and our cost per lead dropped by 25%. They\'re not just an agency — they\'re a true growth partner.',
-    name: 'Sarah Chen',
+    quote: 'Groww Digit delivered a clean, modern website that perfectly matched our brand. The team was responsive, professional, and easy to work with throughout the project.',
+    name: 'Neha Mehta',
     role: 'VP of Marketing, Quantix',
     initials: 'SC',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop',
   },
   {
-    quote: 'The level of strategic thinking and execution is unmatched. They took the time to understand our business deeply and built campaigns that actually moved the needle. Highly recommend.',
-    name: 'Marcus Johnson',
+    quote: 'Groww Digit helped us build a professional online presence from scratch. Our website gave customers more confidence in our business, and we started receiving more inquiries through digital channels.',
+    name: 'Amit Takle',
     role: 'CEO, BrightPath',
     initials: 'MJ',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop',
   },
   {
-    quote: 'We\'ve worked with several agencies before, but none matched the transparency and results we got from GrowwDigit. Their reporting is clear and their team is incredibly responsive.',
-    name: 'Priya Patel',
+    quote: 'We approached Groww Digit when we were starting from scratch. They helped us build our brand, create a professional website, and establish our digital presence. Today, were reaching more customers online and receiving consistent business inquiries',
+    name: 'Mohit Sharma',
     role: 'Head of Growth, Verve',
     initials: 'PP',
     avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&q=80&auto=format&fit=crop',

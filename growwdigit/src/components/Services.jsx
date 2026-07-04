@@ -10,39 +10,41 @@ import ConversionImage from '../assets/conversion.png';
 const services = [
   {
    
-    title: 'SEO',
+    title: 'Website Development',
     description: 'Earn top rankings with technical audits, content optimization, and link-building strategies that drive qualified organic traffic.',
-    image: SeoImage,
+    image: DeveloperImage,
   },
   {
   
-    title: 'Performance Marketing',
+    title: 'Social Media Marketing',
     description: 'Maximize ROAS across Google, Meta, LinkedIn, and programmatic channels with precise bidding and audience targeting.',
-    image: PerformanceImage,
+     image: SocialMediaImage,
   },
   {
 
-    title: 'Social Media Management',
+    title: 'Branding & Graphic Design',
     description: 'Build engaged communities and authentic brand presence through strategy-led content, community management, and paid social.',
-    image: SocialMediaImage,
+   
+    image: PerformanceImage,
   },
   {
     
-    title: 'Content Marketing',
+    title: ' WhatsApp & Email Marketing',
     description: 'Create high-value content that educates, converts, and positions your brand as an authority in your space.',
     image: ContentImage,
   },
   {
 
-    title: 'Web Design & Development',
+    title: 'Application Development',
     description: 'Build conversion-optimized websites with modern design, fast load times, and seamless user experiences.',
     image: DeveloperImage,
   },
   {
 
-    title: 'Conversion Rate Optimization',
+    title: 'Search Engine Optimization (SEO)',
     description: 'Turn more visitors into customers through A/B testing, funnel analysis, UX improvements, and personalization.',
     image: ConversionImage,
+    image: SeoImage,
   },
 ];
 
@@ -51,9 +53,7 @@ export default function Services() {
     <section id="services" style={{ padding: '6rem 0' }}>
       <div className="container">
         <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 4rem' }}>
-          <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--blue)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-            What We Do
-          </span>
+       
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
@@ -67,7 +67,7 @@ export default function Services() {
               marginTop: '0.75rem',
             }}
           >
-            Full-service digital marketing that delivers.
+            Our Digital Solutions for Business Growth.
           </h2>
         </div>
 
