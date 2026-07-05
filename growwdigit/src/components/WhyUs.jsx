@@ -1,5 +1,5 @@
 import { useReveal } from '../hooks/useReveal';
-import MarketingOrbit from '../components/MarketingOrbit';
+import whyusSvg from '../assets/whyus.svg';
 
 const items = [
   'Complete Digital Solutions — Websites, apps, branding, SEO, and digital marketing—all under one roof.',
@@ -41,7 +41,11 @@ function VisualSide() {
         justifyContent: 'center',
       }}
     >
-      <MarketingOrbit />
+      <img
+        src={whyusSvg}
+        alt="Why us illustration"
+        style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: 'var(--radius-2xl)' }}
+      />
     </div>
   );
 }
@@ -54,7 +58,17 @@ function ContentSide() {
       ref={ref}
       className={`reveal reveal--up ${isInView ? 'reveal--in-view' : ''}`}
     >
-      <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--blue)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+      <span style={{
+            fontSize: '0.875rem',
+            fontWeight: 600,
+            color: 'var(--blue)',
+            textTransform: 'uppercase',
+            letterSpacing: '0.08em',
+            background: 'var(--blue-50)',
+            padding: '0.375rem 1rem',
+            borderRadius: 'var(--radius-full)',
+            display: 'inline-block',
+          }}>
         Why GrowwDigit ?
       </span>
       <h2

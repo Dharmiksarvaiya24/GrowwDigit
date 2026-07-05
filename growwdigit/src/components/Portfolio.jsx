@@ -1,151 +1,46 @@
 import { useReveal } from '../hooks/useReveal';
+import helthcareImage from '../assets/helthcare.png';
+import restaurantImage from '../assets/restro.png';
+import gymImage from '../assets/gym.png';
+import startupImage from '../assets/startup.png';
+import ecomImage from '../assets/ecom.png';
+import estateImage from '../assets/estate.png';
 
 const projects = [
   {
-    name: 'SaaS Launch',
+    name: 'Healthcare Clinics',
     category: 'Performance Marketing',
-    svg: (
-      <svg viewBox="0 0 400 300" fill="none" style={{ width: '100%', height: '100%' }}>
-        <rect width="400" height="300" fill="url(#ps1)" />
-        <defs><linearGradient id="ps1" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stopColor="#eff6ff" /><stop offset="100%" stopColor="#dbeafe" /></linearGradient></defs>
-        <rect x="60" y="60" width="120" height="80" rx="8" fill="#fff" stroke="#bfdbfe" strokeWidth="2" />
-        <rect x="80" y="80" width="80" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="80" y="92" width="60" height="4" rx="2" fill="#437bf5" opacity="0.2" />
-        <rect x="80" y="104" width="40" height="4" rx="2" fill="#437bf5" opacity="0.15" />
-        <circle cx="90" cy="120" r="4" fill="#437bf5" opacity="0.5" />
-        <rect x="100" y="118" width="30" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="220" y="60" width="120" height="80" rx="8" fill="#fff" stroke="#bfdbfe" strokeWidth="2" />
-        <rect x="240" y="80" width="80" height="4" rx="2" fill="#10b981" opacity="0.4" />
-        <rect x="240" y="92" width="60" height="4" rx="2" fill="#10b981" opacity="0.25" />
-        <rect x="240" y="104" width="45" height="4" rx="2" fill="#10b981" opacity="0.15" />
-        <rect x="60" y="170" width="280" height="70" rx="8" fill="#fff" stroke="#bfdbfe" strokeWidth="2" />
-        <circle cx="90" cy="205" r="12" fill="#437bf5" opacity="0.15" />
-        <circle cx="90" cy="205" r="6" fill="#437bf5" opacity="0.4" />
-        <rect x="115" y="195" width="100" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="115" y="207" width="70" height="4" rx="2" fill="#437bf5" opacity="0.2" />
-        <rect x="270" y="193" width="50" height="24" rx="6" fill="#437bf5" opacity="0.15" />
-      </svg>
-    ),
+    image: helthcareImage,
     tags: ['Google Ads', 'Meta'],
   },
   {
-    name: 'E-Commerce Redesign',
+    name: 'Restaurant & Café',
     category: 'Web Design & CRO',
-    svg: (
-      <svg viewBox="0 0 400 300" fill="none" style={{ width: '100%', height: '100%' }}>
-        <rect width="400" height="300" fill="url(#ps2)" />
-        <defs><linearGradient id="ps2" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stopColor="#f0fdf4" /><stop offset="100%" stopColor="#dcfce7" /></linearGradient></defs>
-        <rect x="100" y="60" width="200" height="160" rx="12" fill="#fff" stroke="#bbf7d0" strokeWidth="2" />
-        <rect x="120" y="80" width="60" height="60" rx="6" fill="#437bf5" opacity="0.1" />
-        <rect x="120" y="80" width="60" height="60" rx="6" stroke="#437bf5" strokeWidth="1.5" opacity="0.3" />
-        <circle cx="150" cy="110" r="10" fill="#437bf5" opacity="0.2" />
-        <rect x="195" y="85" width="85" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="195" y="97" width="65" height="4" rx="2" fill="#437bf5" opacity="0.2" />
-        <rect x="195" y="109" width="50" height="4" rx="2" fill="#437bf5" opacity="0.15" />
-        <rect x="120" y="155" width="80" height="4" rx="2" fill="#10b981" opacity="0.3" />
-        <rect x="120" y="167" width="60" height="4" rx="2" fill="#10b981" opacity="0.2" />
-        <rect x="120" y="179" width="70" height="4" rx="2" fill="#10b981" opacity="0.15" />
-        <circle cx="270" cy="190" r="16" fill="#437bf5" opacity="0.12" />
-        <path d="M264 190l4 4 8-8" stroke="#437bf5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
+    image: restaurantImage,
     tags: ['UX Audit', 'A/B Testing'],
   },
   {
-    name: 'B2B Lead Gen',
+    name: ' Fitness & Gym',
     category: 'SEO & Content',
-    svg: (
-      <svg viewBox="0 0 400 300" fill="none" style={{ width: '100%', height: '100%' }}>
-        <rect width="400" height="300" fill="url(#ps3)" />
-        <defs><linearGradient id="ps3" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stopColor="#fefce8" /><stop offset="100%" stopColor="#fef9c3" /></linearGradient></defs>
-        <rect x="60" y="80" width="280" height="140" rx="12" fill="#fff" stroke="#fde68a" strokeWidth="2" />
-        <circle cx="100" cy="150" r="20" fill="#437bf5" opacity="0.1" />
-        <circle cx="100" cy="150" r="12" fill="#437bf5" opacity="0.15" />
-        <circle cx="100" cy="150" r="5" fill="#437bf5" />
-        <rect x="135" y="135" width="80" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="135" y="147" width="60" height="4" rx="2" fill="#437bf5" opacity="0.2" />
-        <rect x="135" y="159" width="70" height="4" rx="2" fill="#437bf5" opacity="0.15" />
-        <rect x="240" y="130" width="80" height="40" rx="8" fill="#437bf5" opacity="0.1" />
-        <rect x="250" y="142" width="20" height="4" rx="2" fill="#437bf5" opacity="0.4" />
-        <rect x="278" y="142" width="30" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="90" y="190" width="140" height="4" rx="2" fill="#10b981" opacity="0.2" />
-        <rect x="90" y="202" width="110" height="4" rx="2" fill="#10b981" opacity="0.12" />
-      </svg>
-    ),
+    image: gymImage,
     tags: ['SEO', 'Content Strategy'],
   },
   {
-    name: 'Mobile App Growth',
+    name: 'E-commerce Store',
     category: 'Performance Marketing',
-    svg: (
-      <svg viewBox="0 0 400 300" fill="none" style={{ width: '100%', height: '100%' }}>
-        <rect width="400" height="300" fill="url(#ps4)" />
-        <defs><linearGradient id="ps4" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stopColor="#faf5ff" /><stop offset="100%" stopColor="#f3e8ff" /></linearGradient></defs>
-        <rect x="140" y="50" width="120" height="200" rx="16" fill="#fff" stroke="#e9d5ff" strokeWidth="2.5" />
-        <rect x="185" y="65" width="30" height="4" rx="2" fill="#437bf5" opacity="0.15" />
-        <rect x="160" y="85" width="80" height="80" rx="8" fill="#437bf5" opacity="0.06" />
-        <rect x="160" y="85" width="80" height="80" rx="8" stroke="#437bf5" strokeWidth="1.5" opacity="0.2" />
-        <circle cx="200" cy="125" r="12" fill="#437bf5" opacity="0.3" />
-        <rect x="175" y="150" width="50" height="3" rx="1.5" fill="#437bf5" opacity="0.2" />
-        <rect x="160" y="178" width="80" height="6" rx="3" fill="#437bf5" opacity="0.15" />
-        <rect x="160" y="192" width="60" height="4" rx="2" fill="#437bf5" opacity="0.1" />
-        <circle cx="200" cy="230" r="8" fill="#437bf5" opacity="0.2" />
-        <circle cx="200" cy="230" r="3" fill="#437bf5" />
-        <rect x="60" y="260" width="280" height="2" fill="#437bf5" opacity="0.08" />
-        <circle cx="80" cy="261" r="3" fill="#10b981" opacity="0.4" />
-        <circle cx="320" cy="261" r="3" fill="#437bf5" opacity="0.3" />
-      </svg>
-    ),
+    image: ecomImage,
     tags: ['App Install', 'Retargeting'],
   },
   {
-    name: 'Brand Identity',
+    name: 'Corporate & Startups',
     category: 'Creative Strategy',
-    svg: (
-      <svg viewBox="0 0 400 300" fill="none" style={{ width: '100%', height: '100%' }}>
-        <rect width="400" height="300" fill="url(#ps5)" />
-        <defs><linearGradient id="ps5" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stopColor="#fce7f3" /><stop offset="100%" stopColor="#fbcfe8" /></linearGradient></defs>
-        <circle cx="200" cy="100" r="50" fill="#fff" stroke="#f9a8d4" strokeWidth="2" />
-        <circle cx="200" cy="100" r="30" fill="#437bf5" opacity="0.08" />
-        <circle cx="200" cy="100" r="15" fill="#437bf5" opacity="0.15" />
-        <rect x="100" y="175" width="40" height="40" rx="6" fill="#437bf5" opacity="0.2" />
-        <rect x="155" y="175" width="40" height="40" rx="6" fill="#10b981" opacity="0.2" />
-        <rect x="210" y="175" width="40" height="40" rx="6" fill="#f59e0b" opacity="0.2" />
-        <rect x="265" y="175" width="40" height="40" rx="6" fill="#8b5cf6" opacity="0.2" />
-        <rect x="120" y="185" width="20" height="3" rx="1.5" fill="#fff" opacity="0.6" />
-        <rect x="120" y="193" width="14" height="3" rx="1.5" fill="#fff" opacity="0.4" />
-        <rect x="175" y="185" width="20" height="3" rx="1.5" fill="#fff" opacity="0.6" />
-        <rect x="230" y="185" width="20" height="3" rx="1.5" fill="#fff" opacity="0.6" />
-        <rect x="285" y="185" width="20" height="3" rx="1.5" fill="#fff" opacity="0.6" />
-      </svg>
-    ),
+    image: startupImage,
     tags: ['Branding', 'Design'],
   },
   {
-    name: 'Email Automation',
+    name: 'Real Estate',
     category: 'Conversion Optimization',
-    svg: (
-      <svg viewBox="0 0 400 300" fill="none" style={{ width: '100%', height: '100%' }}>
-        <rect width="400" height="300" fill="url(#ps6)" />
-        <defs><linearGradient id="ps6" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stopColor="#f0f9ff" /><stop offset="100%" stopColor="#e0f2fe" /></linearGradient></defs>
-        <rect x="80" y="60" width="240" height="180" rx="12" fill="#fff" stroke="#bae6fd" strokeWidth="2" />
-        <rect x="100" y="80" width="40" height="40" rx="8" fill="#437bf5" opacity="0.08" />
-        <rect x="100" y="80" width="40" height="40" rx="8" stroke="#437bf5" strokeWidth="1.5" opacity="0.25" />
-        <path d="M112 100l8 6 8-6" stroke="#437bf5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5" />
-        <rect x="155" y="85" width="100" height="4" rx="2" fill="#437bf5" opacity="0.3" />
-        <rect x="155" y="97" width="75" height="4" rx="2" fill="#437bf5" opacity="0.2" />
-        <rect x="100" y="135" width="200" height="2" fill="#f0f9ff" />
-        <rect x="100" y="150" width="40" height="40" rx="8" fill="#10b981" opacity="0.08" />
-        <rect x="100" y="150" width="40" height="40" rx="8" stroke="#10b981" strokeWidth="1.5" opacity="0.25" />
-        <path d="M112 170l8 6 8-6" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5" />
-        <rect x="155" y="155" width="90" height="4" rx="2" fill="#10b981" opacity="0.3" />
-        <rect x="155" y="167" width="65" height="4" rx="2" fill="#10b981" opacity="0.2" />
-        <rect x="100" y="205" width="40" height="40" rx="8" fill="#f59e0b" opacity="0.08" />
-        <rect x="100" y="205" width="40" height="40" rx="8" stroke="#f59e0b" strokeWidth="1.5" opacity="0.25" />
-        <rect x="155" y="210" width="80" height="4" rx="2" fill="#f59e0b" opacity="0.3" />
-        <rect x="155" y="222" width="55" height="4" rx="2" fill="#f59e0b" opacity="0.2" />
-      </svg>
-    ),
+    image: estateImage,
     tags: ['CRM', 'Automation'],
   },
 ];
@@ -215,7 +110,7 @@ export default function Portfolio() {
   );
 }
 
-function ProjectCard({ name, category, svg, index, tags }) {
+function ProjectCard({ name, category, image, index, tags }) {
   const { ref, isInView } = useReveal();
 
   return (
@@ -235,7 +130,7 @@ function ProjectCard({ name, category, svg, index, tags }) {
       <div className="portfolio-card" style={{ width: '100%', position: 'relative' }}>
         <div style={{ aspectRatio: '4 / 3', overflow: 'hidden', position: 'relative', background: 'var(--gray-50)' }}>
           <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {svg}
+            <img src={image} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
         <div style={{ padding: '1.25rem 1.25rem 1.5rem' }}>

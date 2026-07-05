@@ -6,43 +6,44 @@ import SocialMediaImage from '../assets/social-media.png';
 import ContentImage from '../assets/folder.png';
 import DeveloperImage from '../assets/developer.png';
 import ConversionImage from '../assets/conversion.png';
+import App from '../assets/app.png';
 
 const services = [
   {
    
     title: 'Website Development',
-    description: 'Earn top rankings with technical audits, content optimization, and link-building strategies that drive qualified organic traffic.',
+    description: 'Build fast, responsive, and SEO-friendly websites that deliver exceptional user experiences and turn visitors into loyal customers.',
     image: DeveloperImage,
   },
   {
   
     title: 'Social Media Marketing',
-    description: 'Maximize ROAS across Google, Meta, LinkedIn, and programmatic channels with precise bidding and audience targeting.',
+    description: 'Grow your brand across Instagram, Facebook, LinkedIn, and more with strategic content, engaging campaigns, and data-driven advertising.',
      image: SocialMediaImage,
   },
   {
 
     title: 'Branding & Graphic Design',
-    description: 'Build engaged communities and authentic brand presence through strategy-led content, community management, and paid social.',
+    description: 'Build a powerful brand identity with impactful logos, creative designs, and visuals that make your business unforgettable.',
    
     image: PerformanceImage,
   },
   {
     
     title: ' WhatsApp & Email Marketing',
-    description: 'Create high-value content that educates, converts, and positions your brand as an authority in your space.',
+    description: 'Reach your audience instantly with personalized WhatsApp campaigns and high-converting email marketing that boosts engagement and sales.',
     image: ContentImage,
   },
   {
 
     title: 'Application Development',
-    description: 'Build conversion-optimized websites with modern design, fast load times, and seamless user experiences.',
-    image: DeveloperImage,
+    description: 'Develop scalable web and mobile applications with modern technologies, intuitive interfaces, and powerful performance tailored to your business.',
+    image: App,
   },
   {
 
     title: 'Search Engine Optimization (SEO)',
-    description: 'Turn more visitors into customers through A/B testing, funnel analysis, UX improvements, and personalization.',
+    description: 'Rank higher on Google, drive consistent organic traffic, and generate quality leads with proven SEO strategies.',
     image: ConversionImage,
     image: SeoImage,
   },

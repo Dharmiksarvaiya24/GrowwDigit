@@ -386,24 +386,22 @@ input, textarea {
 }
 
 .service-card__icon {
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
   border-radius: var(--radius-lg);
-  background: var(--blue-50);
-  transition: transform var(--transition-base), background var(--transition-base);
+  transition: transform var(--transition-base);
 }
 
 .service-card__icon img {
-  width: 52px;
-  height: 52px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
 .service-card:hover .service-card__icon {
-  background: var(--blue-100);
   transform: scale(1.05);
 }
 
@@ -446,45 +444,6 @@ input, textarea {
 
 .learn-more-link:hover .learn-more-arrow {
   transform: translateX(4px);
-}
-
-/* ========== Testimonial Controls ========== */
-.testimonial-arrow {
-  transition: background var(--transition-base), border-color var(--transition-base) !important;
-}
-
-.testimonial-arrow:hover,
-.testimonial-arrow:focus-visible {
-  background: var(--blue) !important;
-  border-color: var(--blue) !important;
-}
-
-.testimonial-arrow:hover svg,
-.testimonial-arrow:focus-visible svg {
-  stroke: #fff !important;
-}
-
-.testimonial-arrow:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
-}
-
-.testimonial-dot {
-  transition: transform var(--transition-fast), background var(--transition-fast) !important;
-  cursor: pointer;
-}
-
-.testimonial-dot:hover {
-  transform: scale(1.4);
-}
-
-.testimonial-dot.active {
-  background: var(--blue) !important;
-}
-
-.testimonial-dot:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
 }
 
 /* ========== Footer ========== */
@@ -585,10 +544,6 @@ a:focus-visible {
 
   .nav-link::after {
     display: none;
-  }
-
-  .testimonial-dot:hover {
-    transform: none;
   }
 
 }

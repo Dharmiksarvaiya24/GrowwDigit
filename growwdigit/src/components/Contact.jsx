@@ -49,7 +49,7 @@ function ContactInfo() {
   const details = [
     { label: 'Email', value: 'growwdigit@gmail.com', href: 'mailto:growwdigit@gmail.com' },
     { label: 'Phone', value: '+91 6353173022', href: 'tel:+916353173022' },
-    { label: 'Office', value: '302, 2nd Cross SMBB Layout Soldevanahalli, Bangalore, Karnataka 560060' },
+    { label: 'Office', value: '3rd Cross Road MSPP Layout Soldevanahalli, Bangalore, Karnataka 560090' },
   ];
 
   return (
