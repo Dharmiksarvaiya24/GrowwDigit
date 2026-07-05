@@ -47,9 +47,9 @@ function ContactInfo() {
   const { ref, isInView } = useReveal();
 
   const details = [
-    { label: 'Email', value: 'hello@growwdigit.com', href: 'mailto:hello@growwdigit.com' },
-    { label: 'Phone', value: '+1 (555) 000-0000', href: 'tel:+15550000000' },
-    { label: 'Office', value: '123 Marketing Ave, Suite 400, San Francisco, CA 94102' },
+    { label: 'Email', value: 'growwdigit@gmail.com', href: 'mailto:growwdigit@gmail.com' },
+    { label: 'Phone', value: '+91 6353173022', href: 'tel:+916353173022' },
+    { label: 'Office', value: '302, 2nd Cross SMBB Layout Soldevanahalli, Bangalore, Karnataka 560060' },
   ];
 
   return (
@@ -95,7 +95,12 @@ function ContactForm() {
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length > 0) return;
-    // TODO: wire to real backend/email service (e.g. Formspree, EmailJS, or your own API)
+
+    const subject = encodeURIComponent(`New inquiry from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    );
+    window.location.href = `mailto:growwdigit@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 

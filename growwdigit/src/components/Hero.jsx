@@ -1,39 +1,18 @@
 import HeroSvg from '../assets/hero.svg';
-import BackgroundSvg from '../assets/Background.mp4';
-import { scrollToSection } from '../utils/scrollTo';
-import { useParallax } from '../hooks/useParallax';
-
 export default function Hero() {
-  const parallaxRef = useParallax(0.2);
-
   return (
     <section
       id="hero"
-          style={{
-            position: 'relative',
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '7rem 0 4rem',
-            overflow: 'hidden',
-            background: 'linear-gradient(135deg, #fafafa 0%, #ffffff 52%, #f4f4f5 100%)',
-            backgroundSize: '200% 200%',
-            animation: 'gradientMove 12s ease infinite',
-          }}
+      style={{
+        position: 'relative',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '7rem 0 4rem',
+        overflow: 'hidden',
+        background: 'linear-gradient(135deg, #fafafa 0%, #ffffff 52%, #f4f4f5 100%)',
+      }}
     >
-      <div ref={parallaxRef} className="parallax-wrap" style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }}>
-        <img
-          src={BackgroundSvg}
-          alt=""
-          aria-hidden="true"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-          }}
-        />
-      </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div
@@ -81,8 +60,9 @@ export default function Hero() {
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '3rem' }}>
               <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
+                href="https://wa.me/916353173022?text=I%20am%20interested%20in%20GrowwDigit%20Services"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-solid"
                 style={{
                   padding: '0.875rem 2rem',
@@ -118,7 +98,7 @@ export default function Hero() {
           bottom: 0,
           left: 0,
           width: '100%',
-          height: '30px',
+          height: '10px',
           background: 'var(--blue)',
           zIndex: 3,
         }}

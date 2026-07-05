@@ -207,12 +207,6 @@ input, textarea {
   to { transform: rotate(360deg); }
 }
 
-/* ========== Parallax ========== */
-.parallax-wrap {
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
 /* ========== Nav Link Underline ========== */
 .navbar {
   min-height: 88px;
@@ -303,7 +297,7 @@ input, textarea {
   background: var(--blue);
   border-radius: 1px;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
   transition: transform var(--transition-base);
 }
 
@@ -371,10 +365,15 @@ input, textarea {
   text-align: center;
 }
 
-.diff-card:hover,
-.service-card:hover {
+.diff-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-color: transparent !important;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(67, 123, 245, 0.4), 0 6px 18px rgba(67, 123, 245, 0.2);
   border-color: transparent !important;
 }
 
@@ -592,9 +591,6 @@ a:focus-visible {
     transform: none;
   }
 
-  .parallax-wrap {
-    transform: none !important;
-  }
 }
 
 /* ========== Responsive ========== */

@@ -1,5 +1,5 @@
 import { useReveal } from '../hooks/useReveal';
-import vid from '../assets/vid.mp4';
+import MarketingOrbit from '../components/MarketingOrbit';
 
 const items = [
   'Complete Digital Solutions — Websites, apps, branding, SEO, and digital marketing—all under one roof.',
@@ -41,18 +41,7 @@ function VisualSide() {
         justifyContent: 'center',
       }}
     >
-      <video
-        src={vid}
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-        }}
-      />
+      <MarketingOrbit />
     </div>
   );
 }
@@ -66,7 +55,7 @@ function ContentSide() {
       className={`reveal reveal--up ${isInView ? 'reveal--in-view' : ''}`}
     >
       <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--blue)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-        Why GrowwDigit
+        Why GrowwDigit ?
       </span>
       <h2
         style={{
