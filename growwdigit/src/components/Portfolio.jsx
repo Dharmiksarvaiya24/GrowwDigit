@@ -1,177 +1,146 @@
-import { useReveal } from '../hooks/useReveal';
-import helthcareImage from '../assets/helthcare.png';
-import restaurantImage from '../assets/restro.png';
-import gymImage from '../assets/gym.png';
-import startupImage from '../assets/startup.png';
-import ecomImage from '../assets/ecom.png';
-import estateImage from '../assets/estate.png';
+import gymImg from '../assets/gym-it.png';
+import rangkalaImg from '../assets/rangkala.jpg';
+import tridentImg from '../assets/trident.png';
+import bricksImg from '../assets/khodiyar-bricks.png';
+import beautyImg from '../assets/bie-beauty.png';
 
 const projects = [
   {
-    name: 'Healthcare Clinics',
-    category: 'Performance Marketing',
-    image: helthcareImage,
-    tags: ['Google Ads', 'Meta'],
+    id: 'gym',
+    name: 'GYM IT Fitness Club',
+    category: 'Fitness & Wellness',
+    tag: 'Web Dev · Meta Ads',
+    image: gymImg,
+    description:
+      'High-energy membership portal and conversion platform with dynamic workout schedules, trainer highlights, and automated trial pass conversions.',
+    metric: '+240% Member Signups',
+    link: 'https://gymitfitness.com/',
   },
   {
-    name: 'Restaurant & Café',
-    category: 'Web Design & CRO',
-    image: restaurantImage,
-    tags: ['UX Audit', 'A/B Testing'],
+    id: 'rangkala',
+    name: 'RangKala Art & Decor',
+    category: 'Art, Decor & Lifestyle',
+    tag: 'Brand Identity · E-Commerce',
+    image: rangkalaImg,
+    description:
+      'Aesthetic digital storefront and brand identity celebrating traditional Indian artistic creations, handpainted decor, and curated heritage craft.',
+    metric: '5,000+ Pre-launch VIPs',
+    link: 'https://www.rangkala.shop/',
   },
   {
-    name: ' Fitness & Gym',
-    category: 'SEO & Content',
-    image: gymImage,
-    tags: ['SEO', 'Content Strategy'],
+    id: 'trident',
+    name: 'Trident Jewellery Design',
+    category: 'Luxury Jewelry & CAD',
+    tag: 'Web Design · 3D Showcase',
+    image: tridentImg,
+    description:
+      'Immersive luxury catalog portal presenting precision 3D CAD jewelry designs, photorealistic rendering, bespoke manufacturing, and global collections.',
+    metric: '+310% Global Inquiries',
+    link: 'https://www.tridentdesigning.in/',
   },
   {
-    name: 'E-commerce Store',
-    category: 'Performance Marketing',
-    image: ecomImage,
-    tags: ['App Install', 'Retargeting'],
+    id: 'bricks',
+    name: 'Khodiyar Bricks',
+    category: 'Manufacturing & B2B',
+    tag: 'Web Dev · Local SEO',
+    image: bricksImg,
+    description:
+      'Modern digital identity and online showroom connecting commercial contractors, developers, and architects directly with certified masonry supplies.',
+    metric: '+180% Inquiries Growth',
+    link: 'https://khodiyarbricks.in/',
   },
   {
-    name: 'Corporate & Startups',
-    category: 'Creative Strategy',
-    image: startupImage,
-    tags: ['Branding', 'Design'],
-  },
-  {
-    name: 'Real Estate',
-    category: 'Conversion Optimization',
-    image: estateImage,
-    tags: ['CRM', 'Automation'],
+    id: 'beauty',
+    name: 'BiE — Beauty In Everything',
+    category: 'Luxury Skincare & D2C',
+    tag: 'D2C Store · Performance Marketing',
+    image: beautyImg,
+    description:
+      'Award-winning clean skincare D2C e-commerce platform with regimen recommendation funnels, seamless checkout, and high-retention customer journeys.',
+    metric: '+275% Repeat Purchases',
+    link: 'https://beautybybie.com/',
   },
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" style={{
-      padding: '6rem 0',
-      background: 'linear-gradient(180deg, #fff 0%, var(--gray-50) 100%)',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
-      <div style={{
-        position: 'absolute',
-        top: '-15%',
-        left: '-5%',
-        width: '300px',
-        height: '300px',
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, var(--blue-50) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ maxWidth: '600px', marginBottom: '3.5rem' }}>
-          <span style={{
-            fontSize: '0.875rem',
-            fontWeight: 600,
-            color: 'var(--blue)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            background: 'var(--blue-50)',
-            padding: '0.375rem 1rem',
-            borderRadius: 'var(--radius-full)',
-            display: 'inline-block',
-          }}>
-            Our Work
-          </span>
-          <h2
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
-              fontWeight: 800,
-              background: 'linear-gradient(135deg, var(--ink) 0%, var(--blue) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              letterSpacing: '-0.02em',
-              marginTop: '1rem',
-            }}
-          >
-            Results we're proud of.
-          </h2>
+    <section className="section portfolio" data-od-id="portfolio" id="portfolio">
+      <div className="container">
+        <div className="section-head section-head--stacked">
+          <div className="reveal">
+            <span className="index-num">03 — OUR WORK</span>
+            <h2>
+              Results We're <em>Proud Of.</em>
+            </h2>
+            <p className="section-subheading">
+              Proven growth across fitness, manufacturing, luxury retail, and D2C brands — real metrics that move bottom lines.
+            </p>
+          </div>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '1.5rem',
-        }}>
+        <div className="portfolio-showcase-grid">
           {projects.map((p, i) => (
-            <ProjectCard key={p.name} {...p} index={i} />
+            <article key={p.id} className={`project-card ${i % 2 === 0 ? 'reveal-left' : 'reveal-right'} reveal-d${(i % 3) + 1}`}>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-image-wrap"
+                aria-label={`Visit ${p.name} website`}
+              >
+                <img
+                  src={p.image}
+                  alt={`${p.name} - Project Showcase`}
+                  className="project-image"
+                  loading="lazy"
+                />
+                <span className="project-category-badge">{p.category}</span>
+                <span className="project-visit-overlay">
+                  Visit Live Site
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </span>
+              </a>
+
+              <div className="project-card-body">
+                <div className="project-meta-row">
+                  <span className="project-tag">{p.tag}</span>
+                </div>
+
+                <h3 className="project-title">
+                  <a href={p.link} target="_blank" rel="noopener noreferrer">
+                    {p.name}
+                  </a>
+                </h3>
+                <p className="project-desc">{p.description}</p>
+
+                <div className="project-card-footer">
+                  <a href="#contact" className="project-cta-link">
+                    Start Similar <span className="arr">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           ))}
+
+          {/* 6th Card: Interactive Call-to-Action */}
+          <div className="project-card project-cta-card reveal">
+            <div className="project-cta-card-content">
+              <div className="p-cta-icon-badge">+</div>
+              <span className="project-tag">Your Industry</span>
+              <h3 className="project-title">Your Business Next</h3>
+              <p className="project-desc">
+                Whatever your sector — from local services to international e-commerce — let's build a strategy that delivers measurable growth.
+              </p>
+              <div className="project-metric-pill p-metric-highlight">Ready to Scale?</div>
+              <a href="#contact" className="btn btn-accent project-launch-btn">
+                Start a Project <span className="arr">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function ProjectCard({ name, category, image, index, tags }) {
-  const { ref, isInView } = useReveal();
-
-  return (
-    <div
-      ref={ref}
-      className={`reveal reveal--scale ${isInView ? 'reveal--in-view' : ''}`}
-      style={{
-        borderRadius: 'var(--radius-xl)',
-        overflow: 'hidden',
-        cursor: 'pointer',
-        transitionDelay: `${index * 80}ms`,
-        background: '#fff',
-        boxShadow: '0 2px 12px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.02)',
-        border: '1px solid var(--gray-100)',
-      }}
-    >
-      <div className="portfolio-card" style={{ width: '100%', position: 'relative' }}>
-        <div style={{ aspectRatio: '4 / 3', overflow: 'hidden', position: 'relative', background: 'var(--gray-50)' }}>
-          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={image} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
-        </div>
-        <div style={{ padding: '1.25rem 1.25rem 1.5rem' }}>
-          <span style={{
-            fontSize: '0.75rem',
-            fontWeight: 600,
-            color: 'var(--blue)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            background: 'var(--blue-50)',
-            padding: '0.2rem 0.625rem',
-            borderRadius: 'var(--radius-full)',
-            display: 'inline-block',
-            marginBottom: '0.5rem',
-          }}>
-            {category}
-          </span>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.125rem',
-            fontWeight: 700,
-            color: 'var(--ink)',
-            marginBottom: '0.75rem',
-          }}>
-            {name}
-          </h3>
-          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-            {tags.map((tag) => (
-              <span key={tag} style={{
-                fontSize: '0.75rem',
-                color: 'var(--gray-600)',
-                background: 'var(--gray-100)',
-                padding: '0.2rem 0.5rem',
-                borderRadius: 'var(--radius-sm)',
-              }}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

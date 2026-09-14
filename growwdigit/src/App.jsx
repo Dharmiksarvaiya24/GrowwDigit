@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -8,15 +9,39 @@ import Testimonials from './components/Testimonials';
 import CtaBanner from './components/CtaBanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ScrollProgress from './components/ScrollProgress';
-import { ScrollProvider } from './hooks/useScrollAnimations';
 
 function App() {
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const selector = '.reveal, .reveal-left, .reveal-right, .reveal-zoom, .reveal-flip, .reveal-fade';
+    const revealEls = document.querySelectorAll(selector);
+
+    if (prefersReducedMotion) {
+      revealEls.forEach((el) => el.classList.add('visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <ScrollProvider>
-      <ScrollProgress />
+    <>
       <Navbar />
-      <main>
+      <main id="content">
         <Hero />
         <Services />
         <Stats />
@@ -26,9 +51,8 @@ function App() {
         <CtaBanner />
         <Contact />
       </main>
- 
       <Footer />
-    </ScrollProvider>
+    </>
   );
 }
 
