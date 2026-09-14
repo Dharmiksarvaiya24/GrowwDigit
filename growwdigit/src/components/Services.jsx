@@ -1,4 +1,4 @@
-import developerImg from '../assets/Developer.png';
+import developerImg from '../assets/developer.png';
 import socialMediaImg from '../assets/social-media.png';
 import performanceImg from '../assets/performance.png';
 import folderImg from '../assets/folder.png';
