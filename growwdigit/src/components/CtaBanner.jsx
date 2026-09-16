@@ -4,7 +4,7 @@ export default function CtaBanner() {
       <div className="container reveal-zoom">
         <div className="eyebrow-mono">Get Started Today</div>
         <h2>
-          Ready to scale with a <em>strategic partner?</em>
+          Ready to Groww with a <em>strategic partner?</em>
         </h2>
         <p>
           Let's talk about how we can help you achieve predictable, measurable growth.

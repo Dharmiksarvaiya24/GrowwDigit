@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from '../assets/GrowDigit_from_html.png';
 
 const navLinks = [
@@ -11,39 +11,16 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [navHidden, setNavHidden] = useState(false);
-  const lastScrollY = useRef(0);
-  const ticking = useRef(false);
 
   useEffect(() => {
     function handleScroll() {
-      if (ticking.current) return;
-      ticking.current = true;
-      requestAnimationFrame(() => {
-        const currentY = window.scrollY;
-        const isMobile = window.innerWidth <= 920;
-
-        setScrolled(currentY > 20);
-
-        if (isMobile && !mobileOpen) {
-          if (currentY > lastScrollY.current && currentY > 80) {
-            // scrolling DOWN — hide
-            setNavHidden(true);
-          } else {
-            // scrolling UP — always show
-            setNavHidden(false);
-          }
-        }
-
-        lastScrollY.current = currentY;
-        ticking.current = false;
-      });
+      setScrolled(window.scrollY > 20);
     }
 
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [mobileOpen]);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -62,7 +39,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`nav-wrap${navHidden ? ' nav-hidden' : ''}`} data-od-id="topnav">
+      <header className="nav-wrap" data-od-id="topnav">
         <div className="nav-inner">
           <div className={`nav-bar ${scrolled ? 'scrolled' : ''}`} id="navBar">
             <a href="#hero" className="nav-logo" aria-label="GrowwDigit Home">
