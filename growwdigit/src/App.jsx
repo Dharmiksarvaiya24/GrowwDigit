@@ -30,7 +30,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
 
     revealEls.forEach((el) => observer.observe(el));
